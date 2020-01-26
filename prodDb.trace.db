@@ -1,0 +1,3 @@
+2020-01-26 22:47:21 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+select this_.id as id1_2_0_, this_.version as version2_2_0_, this_.account_expired as account_3_2_0_, this_.account_locked as account_4_2_0_, this_.enabled as enabled5_2_0_, this_."password" as password6_2_0_, this_.password_expired as password7_2_0_, this_.username as username8_2_0_ from user this_ where (this_.username=?) limit ? [42102-194]

@@ -4,9 +4,10 @@
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'linkapp.auth.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'linkapp.auth.UserRole'
 grails.plugin.springsecurity.authority.className = 'linkapp.auth.Role'
+grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/h2-console/**',  access: ['permitAll']],
-	[pattern: '/*',               access: ['permitAll']],
+	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],
 	[pattern: '/index.gsp',      access: ['permitAll']],

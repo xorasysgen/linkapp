@@ -1,9 +1,12 @@
 package linkapp.auth
 
+import grails.plugin.springsecurity.annotation.Secured
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
+@Secured(['permitAll'])
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -36,6 +39,14 @@ class UserController {
         }
 
         user.save flush:true
+
+
+        def role = Role.findWhere(authority: 'ROLE_USER')
+        if (!user.authorities.contains(role)) {
+            UserRole.create(user, role, true)
+        }
+
+
 
         request.withFormat {
             form multipartForm {

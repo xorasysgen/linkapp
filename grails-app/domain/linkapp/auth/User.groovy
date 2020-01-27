@@ -2,6 +2,9 @@ package linkapp.auth
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
+import linkapp.model.ReadingItem
+import linkapp.model.Subscription
+import linkapp.model.Topic
 
 @EqualsAndHashCode(includes='username')
 @ToString(includes='username', includeNames=true, includePackage=false)
@@ -21,6 +24,8 @@ class User implements Serializable {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+
+	static hasMany = [topics: Topic, subscriptions: Subscription, readingItems: ReadingItem]
 
 	User(String username, String password) {
 		this()

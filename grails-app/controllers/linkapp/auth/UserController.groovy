@@ -54,6 +54,7 @@ class UserController {
                 redirect user
             }
             '*' { respond user, [status: CREATED] }
+
         }
     }
 

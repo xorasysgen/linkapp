@@ -20,6 +20,13 @@
             </g:if>
             <f:table collection="${topicList}" />
 
+            <g:each in="${topicList}">
+                <p>Owner : ${it.owner.username}</p>
+                <p>Topic Name: ${it.name}</p>
+                <p>Total Topic: ${topicCount}</p>
+                <p>Total Subscription: ${subscriptionCount}</p>
+            </g:each>
+
             <div class="pagination">
                 <g:paginate total="${topicCount ?: 0}" />
             </div>

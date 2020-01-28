@@ -22,6 +22,7 @@ class UserController {
 
     def create() {
         respond new User(params)
+
     }
 
     @Transactional
@@ -51,9 +52,11 @@ class UserController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), user.id])
-                redirect user
+                /*redirect user*/
+                redirect(url: '/topic/index')
             }
             '*' { respond user, [status: CREATED] }
+
 
         }
     }

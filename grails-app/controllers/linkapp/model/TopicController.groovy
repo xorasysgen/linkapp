@@ -14,7 +14,7 @@ class TopicController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Topic.list(params), model:[topicCount: Topic.count()]
+        respond Topic.list(params), model:[topicCount: Topic.count(),subscriptionCount: Subscription.count()]
     }
 
     def show(Topic topic) {

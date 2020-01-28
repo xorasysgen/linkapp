@@ -27,7 +27,7 @@
             </g:hasErrors>
             <g:form resource="${this.linkResource}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="linkResource"/>
+                    <f:all bean="linkResource" except="readingItems"/>
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

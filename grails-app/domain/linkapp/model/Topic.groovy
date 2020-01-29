@@ -8,6 +8,8 @@ class Topic {
     User createdBy
     String topicName
     Visibility visibility
+    Date dateCreated;
+    Date lastUpdated;
 
     static belongsTo = [User]
 
@@ -21,4 +23,7 @@ class Topic {
     }
 
 
+    String toString() {
+        return "${topicName}"
+    }
 }

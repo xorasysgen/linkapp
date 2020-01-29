@@ -15,4 +15,8 @@ class Resource {
     static constraints = {
         description nullable: false, blank: false, maxSize: 1024
     }
+
+    String toString() {
+        return "${description}"
+    }
 }

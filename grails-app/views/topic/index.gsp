@@ -21,8 +21,8 @@
             <f:table collection="${topicList}" />
 
             <g:each in="${topicList}">
-                <p>Owner : ${it.owner.username}</p>
-                <p>Topic Name: ${it.name}</p>
+                <p>createdBy : ${it.createdBy.username}</p>
+                <p>Topic Name: ${it.topicName}</p>
                 <p>Total Topic: ${topicCount}</p>
                 <p>Total Subscription: ${subscriptionCount}</p>
             </g:each>

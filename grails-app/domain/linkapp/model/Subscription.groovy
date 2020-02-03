@@ -16,9 +16,9 @@ class Subscription {
 
     static constraints = {
     }
-   /* String toString() {
+    String toString() {
         return "${createdBy} subscribed ${topic}"
 
-    }*/
+    }
 }
 

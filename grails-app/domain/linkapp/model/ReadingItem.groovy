@@ -16,6 +16,6 @@ class ReadingItem {
     }
 
     String toString() {
-        return "${user} read the ${resource}: ${isRead}"
+        return "${user} read the ${resource}"
     }
 }
